@@ -1,26 +1,40 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Site settings
+title: John Doe
+description: "Software Developer & Finance Enthusiast"
+url: "https://yourusername.github.io" # Your GitHub Pages URL
+baseurl: "" # Leave this empty unless you are using a subfolder
 
-# Permalinks
-permalink:        pretty
-relative_permalinks: true
-
-# Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
-
+# Author information
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name: John Doe
+  email: john.doe@example.com
+  github: https://github.com/johndoe
+  linkedin: https://linkedin.com/in/johndoe
+  twitter: https://twitter.com/johndoe
 
-paginate:         5
+# Build settings
+markdown: kramdown
+theme: minimal-mistakes-jekyll
 
-# Custom vars
-version:          2.1.0
+# Navigation links
+navigation:
+  - title: Home
+    url: /
+  - title: Resume
+    url: /resume/
+  - title: Projects
+    url: /projects/
+  - title: Contact
+    url: /contact/
 
-github:
-  repo:           https://github.com/poole/hyde
+# Social links
+social:
+  - icon: twitter
+    url: https://twitter.com/johndoe
+  - icon: github
+    url: https://github.com/johndoe
+  - icon: linkedin
+    url: https://linkedin.com/in/johndoe
+
+# Google Analytics
+google_analytics: UA-XXXXXXXXX # Replace with your track
