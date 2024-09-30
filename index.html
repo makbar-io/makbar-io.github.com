@@ -1,72 +1,37 @@
-# John Doe
-
-[Email](mailto:john.doe@example.com) | [LinkedIn](https://linkedin.com/in/johndoe) | [GitHub](https://github.com/johndoe) | [Portfolio](https://johndoe.com)
-
+---
+layout: default
+title: Home
 ---
 
-## About Me
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
 
-Enthusiastic software developer with a passion for building scalable web applications and a strong foundation in full-stack development. Adept at collaborating in diverse team environments to create innovative solutions.
+    <span class="post-date">{{ post.date | date_to_string }}</span>
 
----
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
 
-## Skills
-
-- **Languages**: JavaScript, Python, Java, HTML, CSS
-- **Frameworks**: React, Node.js, Express, Django
-- **Databases**: MongoDB, PostgreSQL, MySQL
-- **Tools**: Git, Docker, Jenkins, AWS
-- **Soft Skills**: Teamwork, Communication, Problem Solving, Adaptability
-
----
-
-## Experience
-
-### Software Developer
-**ABC Company** – San Francisco, CA  
-*June 2022 - Present*
-
-- Developed and maintained features for a customer-facing web application using React and Node.js.
-- Collaborated with UX/UI designers to enhance user experience and interface design.
-- Implemented RESTful APIs and integrated third-party services.
-
-### Intern
-**XYZ Corp** – Remote  
-*January 2022 - May 2022*
-
-- Assisted in developing a data visualization tool using Python and Dash.
-- Participated in Agile ceremonies and contributed to sprint planning.
-- Conducted testing and debugging to improve application performance.
-
----
-
-## Education
-
-**Bachelor of Science in Computer Science**  
-University of California, Berkeley – Berkeley, CA  
-*Graduated May 2022*
-
----
-
-## Projects
-
-- **Project Tracker**: A web application for tracking project milestones, built with React and Firebase. [GitHub Repository](https://github.com/johndoe/project-tracker)
-- **Weather App**: A weather forecasting app using JavaScript and OpenWeather API. [GitHub Repository](https://github.com/johndoe/weather-app)
-- **Portfolio Website**: A personal portfolio to showcase projects and skills. [Live Demo](https://johndoe.com)
-
----
-
-## Certifications
-
-- AWS Certified Solutions Architect – Associate
-- Certified Scrum Master (CSM)
-
----
-
-## Contact
-
-Feel free to reach out for collaboration or inquiries!
-
----
-
-**© 2024 John Doe**
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
