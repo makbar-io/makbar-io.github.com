@@ -1,24 +1,71 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Resume & Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>John Doe</h1>
+        <p>Software Developer & Finance Enthusiast</p>
+        <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a> | 
+           LinkedIn: <a href="https://linkedin.com/in/johndoe">LinkedIn Profile</a> | 
+           GitHub: <a href="https://github.com/johndoe">GitHub Profile</a></p>
+    </header>
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
+    <main>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I am a dedicated software developer with a background in finance. I enjoy building scalable applications and leveraging technology to solve complex problems.</p>
+        </section>
 
-h1 {
-    color: #333;
-}
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Languages: JavaScript, Python, SQL</li>
+                <li>Frameworks: React, Node.js, Django</li>
+                <li>Databases: PostgreSQL, MongoDB</li>
+                <li>Tools: Git, Docker, AWS</li>
+            </ul>
+        </section>
 
-section {
-    margin-bottom: 20px;
-}
+        <section class="experience">
+            <h2>Experience</h2>
+            <h3>Software Developer</h3>
+            <p><strong>ABC Company</strong> | San Francisco, CA | June 2022 - Present</p>
+            <ul>
+                <li>Developed web applications using React and Node.js.</li>
+                <li>Collaborated with cross-functional teams to enhance user experience.</li>
+                <li>Implemented APIs to improve data retrieval efficiency.</li>
+            </ul>
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-}
+            <h3>Finance Intern</h3>
+            <p><strong>XYZ Corp</strong> | Remote | January 2022 - May 2022</p>
+            <ul>
+                <li>Analyzed financial data to assist in decision-making.</li>
+                <li>Created reports and dashboards using Excel and Python.</li>
+            </ul>
+        </section>
+
+        <section class="education">
+            <h2>Education</h2>
+            <p><strong>B.S. in Computer Science</strong><br>
+            University of California, Berkeley | Graduated May 2022</p>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Project Tracker</strong>: A web application for tracking project milestones. <a href="https://github.com/johndoe/project-tracker">View Project</a></li>
+                <li><strong>Financial Dashboard</strong>: A dashboard for visualizing financial data. <a href="https://github.com/johndoe/financial-dashboard">View Project</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 John Doe</p>
+    </footer>
+</body>
+</html>
